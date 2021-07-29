@@ -17,19 +17,19 @@ namespace NumberGuesser
             Console.WriteLine($"Is {halfOfList} your number?");
             Console.WriteLine("If it is your number, type correct. If it is not your number, type higher or lower");
             var userInput = Console.ReadLine();
-            Console.WriteLine(halfOfList);
-            if (userInput == "correct")
-            {
-                Console.WriteLine("Nice!");
-            }
-            if (userInput == "higher")
-            {
 
-            }
-            if (userInput == "lower")
+            while (userInput != "correct")
             {
+                if (userInput == "higher")
+                {
 
+                }
+                if (userInput == "lower")
+                {
+
+                }
             }
+            Console.WriteLine("Nice!");
         }
     }
 }
