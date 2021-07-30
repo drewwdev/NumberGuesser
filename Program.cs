@@ -10,6 +10,11 @@ namespace NumberGuesser
             Console.WriteLine("Pick a number between 1 and 1024");
 
         }
+        static void CorrectHigherLower()
+        {
+            Console.WriteLine("Type correct if it is correct, type higher if it is too low, type lower if it is too high");
+
+        }
         static void Main(string[] args)
         {
             var numbers = new List<int>() { };
@@ -25,7 +30,7 @@ namespace NumberGuesser
             while (userInput != "correct")
             {
                 Console.WriteLine($"Is this your number: {numbers[correctNum]}");
-                Console.WriteLine("Type correct if it is correct, type higher if it is too low, type lower if it is too high");
+                CorrectHigherLower();
                 userInput = Console.ReadLine();
 
                 if (userInput == "higher")
