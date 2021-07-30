@@ -5,14 +5,19 @@ namespace NumberGuesser
 {
     class Program
     {
-        static void Main(string[] args)
+        static void PickNumberGreeting()
         {
             Console.WriteLine("Pick a number between 1 and 1024");
+
+        }
+        static void Main(string[] args)
+        {
             var numbers = new List<int>() { };
             for (int number = 1; number <= 1024; number++)
             {
                 numbers.Add(number);
             }
+            PickNumberGreeting();
 
             var correctNum = 0;
 
