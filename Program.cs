@@ -13,23 +13,30 @@ namespace NumberGuesser
             {
                 numbers.Add(number);
             }
-            int halfOfList = numbers.Count / 2;
-            Console.WriteLine($"Is {halfOfList} your number?");
-            Console.WriteLine("If it is your number, type correct. If it is not your number, type higher or lower");
-            var userInput = Console.ReadLine();
 
+            var correctNum = 0;
+
+            string userInput = "";
             while (userInput != "correct")
             {
+                Console.WriteLine($"Is this your number: {numbers[correctNum]}");
+                Console.WriteLine("Type correct if it is correct, type higher if it is too low, type lower if it is too high");
+                userInput = Console.ReadLine();
+
                 if (userInput == "higher")
                 {
-
+                    correctNum += 10;
                 }
+
                 if (userInput == "lower")
                 {
-
+                    correctNum--;
                 }
             }
-            Console.WriteLine("Nice!");
+            if (userInput == "correct")
+            {
+                Console.WriteLine("Nice!");
+            }
         }
     }
 }
